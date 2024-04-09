@@ -74,7 +74,9 @@ input, select, textarea {
 
 .pic {
 	width:50%;
-	clip-path: circle();
+	/* clip-path: circle(); */
+	border-radius: 20%;
+	padding: 20px;
 }
 
 /* Basic */
@@ -2092,6 +2094,7 @@ input, select, textarea {
 		text-align: center;
 		position: relative;
 		top: 1.5em;
+		padding:10em;
 	}
 
 		#logo h1 {
