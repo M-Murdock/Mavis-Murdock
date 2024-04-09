@@ -74,6 +74,7 @@ input, select, textarea {
 
 .pic {
 	width:60%;
+	clip-path: circle();
 }
 
 /* Basic */
