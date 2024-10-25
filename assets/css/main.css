@@ -25,6 +25,15 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+/* .background {
+	background-size: contain !important; 
+	background-position: center !important;
+} */
+.background {
+	max-width: 35%;
+	height: auto;
+  }
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -70,13 +79,6 @@ input, select, textarea {
 	-webkit-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
-}
-
-.pic {
-	width:50%;
-	/* clip-path: circle(); */
-	border-radius: 20%;
-	padding: 20px;
 }
 
 /* Basic */
@@ -2094,7 +2096,6 @@ input, select, textarea {
 		text-align: center;
 		position: relative;
 		top: 1.5em;
-		padding:10em;
 	}
 
 		#logo h1 {
