@@ -29,9 +29,17 @@ section, summary, time, mark, audio, video {
 	background-size: contain !important; 
 	background-position: center !important;
 } */
+ #photo {
+	padding-bottom: 2%;
+	padding-top: 2%;
+ }
+ #job-title {
+	color: #62A8AC;
+ }
 .background {
 	max-width: 35%;
 	height: auto;
+	/* padding-bottom: 5%; */
   }
 
 article, aside, details, figcaption, figure,
@@ -1681,7 +1689,7 @@ input, select, textarea {
 		input[type="reset"].style1,
 		button.style1,
 		.button.style1 {
-			background: #e97770 url("images/overlay.png");
+			background: #62A8AC url("images/overlay.png");
 			color: #fff;
 		}
 
@@ -1859,7 +1867,7 @@ input, select, textarea {
 		}
 
 		.feature-list h3 {
-			color: #e97770 !important;
+			color: #62A8AC !important;
 			margin: -0.35em 0 0.75em 0;
 			font-size: 1.15em;
 			letter-spacing: 0.05em;
@@ -2011,13 +2019,13 @@ input, select, textarea {
 			}
 
 		.wrapper.style1 {
-			background: #e97770 url("images/overlay.png");
+			background: #62A8AC url("images/overlay.png");
 			color: #eee;
 			color: rgba(255, 255, 255, 0.75);
 		}
 
 			.wrapper.style1 .title {
-				background: #e97770 url("images/overlay.png");
+				background: #62A8AC url("images/overlay.png");
 				color: #fff;
 			}
 
@@ -2066,11 +2074,13 @@ input, select, textarea {
 		align-items: center;
 		-moz-justify-content: center;
 		-webkit-justify-content: center;
+		
 		-ms-justify-content: center;
 		justify-content: center;
 		position: relative;
 		height: 24em;
-		background: url("../../images/banner.jpg") center center;
+		background: #ffffff;
+		/* url("../../images/banner.jpg") center center; */
 		background-size: cover;
 		padding: 0;
 	}
@@ -2101,7 +2111,7 @@ input, select, textarea {
 		#logo h1 {
 			font-weight: 900;
 			text-transform: uppercase;
-			color: #fff;
+			color: #484d55;
 			font-size: 2em;
 			letter-spacing: 0.25em;
 		}
@@ -2270,7 +2280,7 @@ input, select, textarea {
 	}
 
 		#highlights .highlight h3 {
-			color: #e97770;
+			color: #62A8AC;
 			margin: 0 0 0.75em 0;
 			font-size: 1.15em;
 			letter-spacing: 0.05em;
