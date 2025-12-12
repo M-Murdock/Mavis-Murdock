@@ -1,145 +1,342 @@
 <!DOCTYPE HTML>
-<!--
-	Escape Velocity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Mavis Murdock</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mavis Murdock</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      /* Custom refinements */
+      #logo h1 {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+      #job-title {
+        font-size: 1.4rem;
+        opacity: 0.85;
+      }
+      #intro .container {
+        max-width: 800px;
+      }
+      #photo {
+        width: 260px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto 2.5rem auto;
+        box-shadow: 0 10px 28px rgba(0,0,0,0.28);
+        border: 4px solid rgba(255,255,255,0.85);
+      }
+      h3 a {
+        text-decoration: none;
+      }
+      section h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+      .feature-list p {
+        opacity: 0.9;
+      }
+      #footer .feature-list a {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.15rem;
+      }
+      #footer p {
+        margin-bottom: 0.4rem;
+        font-size: 1.1rem;
+      }
 
-			<!-- Header -->
-				<section id="header" class="wrapper">
+      /* Card styling */
+      .card {
+        background: rgba(255,255,255,0.05);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+      }
+      .card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+      }
+      .card .year {
+        font-weight: 600;
+        color: #a8a8a8;
+        margin-bottom: 0.7rem;
+      }
+      .card p {
+        opacity: 0.9;
+        margin: 0;
+      }
+      .section-title {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
 
-					<!-- Logo -->
-						<div id="logo">
-							<h1><a href="index.html">Mavis Murdock</a></h1>
-						</br>
-							<h3 id="job-title">Tufts University CS PhD Candidate</h3>
-						<!-- </br> -->
-							<!-- <div class="background"> -->
-								<!-- <img src="images/cropped_photo.png" class="background" id="photo"/> -->
-							<!-- </div> -->
-						</div>
+	.experience-card {
+	/* background: rgba(255, 255, 255, 0.05); */
+	padding: 0.8rem 1rem;
+	border-radius: 8px;
+	/* box-shadow: 0 4px 12px rgba(0,0,0,0.12); */
+	font-family: serif;
+	font-size: 0.95rem;
+	flex: 1 1 300px;
+	transition: transform 0.2s, box-shadow 0.2s;
+	}
+	.section-title {
+	font-family: serif;
+	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+	}
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-								<li><a href="#intro">About</a></li>
-								<li><a href="#main">Projects/Research</a></li>
-								<li><a href="#footer">Contact</a></li>
-							</ul>
-						</nav>
+	.cv-button {
+	display: inline-block;
+	background-color: #0077cc; /* Primary blue, can change */
+	color: white;
+	font-weight: 600;
+	padding: 0.6rem 1.2rem;
+	border-radius: 8px;
+	text-decoration: none;
+	transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+	font-size: 1rem;
+	}
 
-				</section>
+	.cv-button:hover {
+	background-color: #005fa3; /* Darker on hover */
+	transform: translateY(-2px);
+	box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+	}
 
-			<!-- Intro -->
-				<section id="intro" class="wrapper style1">
-					<div class="title">About</div>
-					<img src="images/cropped_photo.png" class="background" id="photo"/>
-					<div class="container">
-						<p class="style1">I am a third-year Computer Science PhD candidate at Tufts University and a member of the <a href="https://aabl.cs.tufts.edu/"> Assistive Agent Behavior and Learning Lab (AABL) </a>.
-						I am advised by <a href="https://eshort.github.io/"> Dr. Elaine Schaertl Short.</a> </p>
-						
-						<p class="style1"> My research focuses on Human-Robot Interaction. I am interested in 
-							improving the usability of assistive robots by incorporating feedback from disabled users to increase the transparency and human-interpretability 
-							of their underlying algorithms. </p>
+    </style>
+  </head>
 
-						<p class="style1"> I have M.S. in CS from Tufts University ('24) and a B.A. in CS and Classics from Mount Holyoke College ('22)</p>
+  <body class="homepage is-preload">
+    <div id="page-wrapper">
 
-						<p class="style3"> <a href="assets/CV_Mavis.pdf">Curriculum Vitae</a></p>
+      <!-- Header -->
+      <section id="header" class="wrapper">
+        <div id="logo">
+          <h1><a href="index.html">Mavis Murdock</a></h1>
+          <br />
+          <h3 id="job-title">Tufts University CS PhD Candidate</h3>
+        </div>
 
-					</div>
-				</section>
+        <nav id="nav">
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="#intro">About</a></li>
+            <li><a href="#main">Projects/Research</a></li>
+			<li><a href="#experience">Teaching Experience</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
 
-			<!-- Main -->
-				<section id="main" class="wrapper style2">
-					<div class="title">Projects/Research</div>
-					<div class="container">
+      <!-- Intro -->
+      <section id="intro" class="wrapper style1">
+        <div class="title">About</div>
 
+        <div class="container" style="max-width: 900px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <img src="images/cropped_photo.png" id="photo" />
+          <p class="style1">
+            I am a Computer Science PhD candidate at Tufts University and a member of the
+            <a href="https://aabl.cs.tufts.edu/">Assistive Agent Behavior and Learning Lab (AABL)</a>.
+            I am advised by
+            <a href="https://eshort.github.io/">Dr. Elaine Schaertl Short.</a>
+          </p>
 
-						<!-- Features -->
-							<section id="features">
+          <p class="style1">
+            My research is in Human-Robot Interaction and focuses on improving the transparency of robot behavioral models to foster better collaborative human-robot interactions, particularly for individuals with disabilities.
+			<!-- I am interested in improving the usability of assistive robots by incorporating feedback from disabled users to increase the transparency and interpretability of underlying algorithms. -->
+          </p>
 
-								<div class="feature-list">
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3><a href="https://dl.acm.org/doi/10.1145/3610977.3634947">Online Behavior Modification for Expressive User Control of RL-Trained Robots</a> - 2024</h3>
-												<p>Isaac Sheidlower, Mavis Murdock, Emma Bethel, Reuben M Aronson, Elaine Schaertl Short</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3><a href="https://github.com/M-Murdock/Mr-Meter-Machine">Mr. Meter Machine</a></h3>
-												<p>A tool for introductory Ancient Greek students to practice scanning lines from the Iliad</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3><a href="https://sites.google.com/a/nmt.edu/human-centered-computing-and-security-lab/home/research/nsf-cybersecurity-reunmt-2022?authuser=0">Emerging Challenges in Cybersecurity</a></h3>
-												<p>Exploring Machine Learning Techniques for Botnet Detection</p>
-											</section>
-											</section>
-										</div>
+          <p class="style1">
+            I have an M.S. in Computer Science from Tufts University ('24) and a B.A. in Computer Science and Classics from Mount Holyoke College ('22).
+          </p>
 
-							</section>
-
-					</div>
-				</section>
-
-			<!-- Footer -->
-			<section id="footer" class="wrapper style2">
-				<div class="title">Contact</div>
-				<div class="container">
-
-
-					<!-- Features -->
-						<section id="features">
-
-							<div class="feature-list">
-								<div class="row">
-									<div class="col-6 col-12-medium">
-										<section>
-											<h3>Social</h3>
-											<p><a href="https://github.com/M-Murdock">Github</a></p>
-											<p><a href="https://www.linkedin.com/in/mavis-murdock/">Linkedin</a></p>
-										</section>
-									</div>
-									<div class="col-6 col-12-medium">
-										<section>
-											<h3>Email</h3>
-											<p>Mavis.Murdock@tufts.edu</p>
-										</section>
-									</div>
-
-						</section>
-
-
-					<div id="copyright">
-						<ul>
-							<li>&copy; Mavis Murdock</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
-
-				</section>
+          <!-- <p class="style3"><a href="assets/CV_Mavis.pdf">Curriculum Vitae</a></p> -->
+		<p class="style3">
+			<a href="assets/CV_Mavis.pdf" class="cv-button" target="_blank">View My CV</a>
+		</p>
 
 		</div>
+      </section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <!-- Main -->
+      <section id="main" class="wrapper style2">
+        <div class="title">Projects & Research</div>
+        <div class="container">
 
-	</body>
+    	<!-- Research Section -->
+		<section id="research">
+		<div class="section-title">Research</div>
+		<div class="row">
+
+			<div class="col-6 col-12-medium">
+			<div class="card">
+				<h3><a href="https://dl.acm.org/doi/10.1145/3704637.3734732">Empowering Disabled Engineers through Accessible Co-Curricular Activities</a></h3>
+				<div class="year">2025</div>
+				<div class="venue"> ACM SIGCSE Conference on Research on Equity and Sustained Participation in Engineering, Computing, and Technology (RESPECT)</div>
+				<p>Mavis Murdock, Katherine H. Allen, Elaine Short</p>
+			</div>
+			</div>
+
+			<div class="col-6 col-12-medium">
+			<div class="card">
+				<h3><a href="">Accessibility and Robotics Education</a></h3>
+
+				<div class="year">2024</div>
+				<div>Workshop on Teaching Accessibility in Different Disciplines: Topics, Approaches, Resources, Challenges</div>
+				<div class="venue">ACM SIGACCESS Conference on Computers and Accessibility (ASSETS)</div>
+				<p>Mavis Murdock, Elaine Schaertl Short</p>
+			</div>
+			</div>
+
+			<div class="col-6 col-12-medium">
+			<div class="card">
+				<h3><a href="https://dl.acm.org/doi/10.1145/3610977.3634947">Online Behavior Modification for Expressive User Control of RL-Trained Robots</a></h3>
+				<div class="year">2024</div>
+				<div class="venue">ACM/IEEE International Conference on Human-Robot Interaction (HRI)</div>
+				<p>Isaac Sheidlower, Mavis Murdock, Emma Bethel, Reuben M Aronson, Elaine Schaertl Short</p>
+			</div>
+			</div>
+
+			<div class="col-6 col-12-medium">
+			<div class="card">
+				<h3><a href="https://sites.google.com/a/nmt.edu/human-centered-computing-and-security-lab/home/research/nsf-cybersecurity-reunmt-2022?authuser=0">Emerging Challenges in Cybersecurity</a></h3>
+				<div class="year">2022</div>
+				<p>Exploring machine learning techniques for botnet detection.</p>
+			</div>
+			</div>
+
+		</div>
+		</section>
+
+          <!-- Projects Section -->
+          <section id="projects">
+            <div class="section-title">Projects</div>
+            <div class="row">
+
+              <div class="col-6 col-12-medium">
+                <div class="card">
+                  <h3><a href="https://github.com/M-Murdock/Mr-Meter-Machine">Mr. Meter Machine</a></h3>
+                  <div class="year">2024</div>
+                  <p>A tool for introductory Ancient Greek students to practice scanning lines from the Iliad.</p>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+      </section>
+
+	<!-- Experience -->
+	<section id="experience" class="wrapper style1">
+		<div class="title">Teaching Experience</div>
+		<div class="container" style="max-width: 900px; margin: 0 auto;">
+
+			<hr>
+			<!-- Tufts University -->
+			<div class="section-title" style="margin-top: 1.5rem; font-weight: 600;">Tufts University</div>
+			<div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem;">
+			<div class="experience-card">
+				<strong>Data Structures (Instructor)</strong> Summer 2024, 2025
+			</div>
+			<div class="experience-card">
+				<strong>Intro to Human-Robot Interaction (TA)</strong> Fall 2023, 2025
+			</div>
+			<div class="experience-card">
+				<strong>Robotics Teaching Lab (TA)</strong> Spring 2024
+			</div>
+			<div class="experience-card">
+				<strong>Probabilistic Robotics (TA)</strong> Spring 2023
+			</div>
+			</div>
+
+			<hr>
+			<!-- Mount Holyoke College -->
+			<div class="section-title" style="margin-top: 1.5rem; font-weight: 600;">Mount Holyoke College</div>
+			<div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem;">
+			<div class="experience-card">
+				<strong>Operating Systems (TA)</strong> Spring 2022 
+			</div>
+			<div class="experience-card">
+				<strong>Java Programming Language (TA)</strong> Spring 2021 
+			</div>
+			</div>
+
+		</div>
+	</section>
+
+		
+
+
+<!-- Include Font Awesome in your <head> -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+	<!-- Footer -->
+	<section id="footer" class="wrapper style2">
+	<div class="title">Contact</div>
+	<div class="container" style="padding-top: 2rem;"> <!-- Added padding-top -->
+
+		<div class="row" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+
+		<!-- GitHub Card -->
+		<div class="card" style="flex: 1 1 150px; text-align: center;">
+			<h3>GitHub</h3>
+			<a href="https://github.com/M-Murdock" target="_blank" style="text-decoration: none; color: inherit;">
+			<i class="fab fa-github fa-2x"></i>
+			</a>
+		</div>
+
+		<!-- LinkedIn Card -->
+		<div class="card" style="flex: 1 1 150px; text-align: center;">
+			<h3>LinkedIn</h3>
+			<a href="https://www.linkedin.com/in/mavis-murdock/" target="_blank" style="text-decoration: none; color: inherit;">
+			<i class="fab fa-linkedin fa-2x"></i>
+			</a>
+		</div>
+
+		<!-- Email Card -->
+		<div class="card" style="flex: 1 1 150px; text-align: center;">
+			<h3>Email</h3>
+			<a href="mailto:Mavis.Murdock@tufts.edu" style="text-decoration: none; color: inherit;">
+			<i class="fas fa-envelope fa-2x"></i>
+			</a>
+		</div>
+
+		</div>
+	</div>
+
+	<div id="copyright" style="text-align: center; margin-top: 2rem;">
+		<ul style="list-style: none; padding: 0; display: inline-flex; gap: 1rem;">
+		<li>&copy; Mavis Murdock</li>
+		<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</div>
+	</section>
+
+
+
+
+	  
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

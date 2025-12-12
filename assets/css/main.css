@@ -54,6 +54,12 @@ ol, ul {
 	list-style: none;
 }
 
+.card .venue {
+  font-style: italic;
+  color: #c0c0c0;
+  margin-bottom: 0.7rem;
+}
+
 blockquote, q {
 	quotes: none;
 }
