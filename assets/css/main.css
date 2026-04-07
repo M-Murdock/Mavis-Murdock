@@ -2084,7 +2084,7 @@ input, select, textarea {
 		-ms-justify-content: center;
 		justify-content: center;
 		position: relative;
-		height: 24em;
+		height: 18em;
 		background: #ffffff;
 		/* url("../../images/banner.jpg") center center; */
 		background-size: cover;
@@ -2102,7 +2102,7 @@ input, select, textarea {
 		}
 
 		.homepage #header {
-			height: 35em;
+			height: 26em;
 		}
 
 /* Logo */
@@ -2898,11 +2898,11 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				height: 17em;
+				height: 13em;
 			}
 
 				.homepage #header {
-					height: 20em;
+					height: 15em;
 				}
 
 		/* Logo */
