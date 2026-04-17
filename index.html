@@ -46,6 +46,117 @@
         font-size: 1.1rem;
       }
 
+      /* Teaching course card */
+      .course-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 1.25rem;
+        margin-bottom: 1.25rem;
+        align-items: start;
+      }
+      .teaching-course-card {
+        background: rgba(255,255,255,0.05);
+        border-radius: 12px;
+        padding: 1.25rem 1.5rem;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        user-select: none;
+      }
+      .teaching-course-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+      }
+      .course-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+      .course-header-left {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+      .course-title {
+        font-size: 1.05rem;
+        font-weight: 600;
+        display: block;
+      }
+      .course-role {
+        display: inline-block;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 0.15rem 0.55rem;
+        border-radius: 999px;
+        vertical-align: middle;
+      }
+      .instructor-role { 
+        /* background: rgba(255,255,255,0.05); */
+        color: #d6dfdf;
+        /* border: 1px solid rgba(255,255,255,0.3); */
+      }
+      .ta-role {
+        /* background: rgba(255,255,255,0.05); */
+        color: #d6dfdf;
+        /* border: 1px solid rgba(255,255,255,0.3); */
+      }
+      .course-header-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.4rem;
+      }
+      .course-semesters {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #ffffff;
+        white-space: nowrap;
+      }
+
+      .course-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding-top 0.3s ease;
+      }
+      .teaching-course-card.open .course-body {
+        max-height: 300px;
+        padding-top: 0.9rem;
+      }
+      .course-topics {
+        margin: 0 0 0 1.2rem;
+        padding: 0;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        line-height: 1.7;
+      }
+      .course-topics li {
+        margin-bottom: 0.1rem;
+      }
+      .syllabus-link {
+        display: inline-block;
+        margin-top: 0.6rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #9fd4ff;
+        text-decoration: none;
+        letter-spacing: 0.03em;
+      }
+      .syllabus-link:hover {
+        text-decoration: underline;
+      }
+      .teaching-intro {
+        text-align: center;
+        font-size: 1.05rem;
+        max-width: 720px;
+        margin: 0 auto 2.5rem auto;
+        line-height: 1.75;
+        opacity: 0.9;
+      }
+
       /* Card styling */
       .card {
         background: rgba(255,255,255,0.05);
@@ -242,35 +353,146 @@
 		<div class="title">Teaching Experience</div>
 		<div class="container" style="max-width: 900px; margin: 0 auto;">
 
-			<hr>
+			<p class="teaching-intro">
+				I am committed to accessible, student-centered teaching across a broad range of CS topics —
+				from introductory programming to advanced robotics. I have experience as an instructor of record
+				and as a teaching assistant at both a research university and a liberal arts college.
+			</p>
+
 			<!-- Tufts University -->
-			<div class="section-title" style="margin-top: 1.5rem; font-weight: 600;">Tufts University</div>
-			<div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem;">
-			<div class="experience-card">
-				<strong>Data Structures (Instructor)</strong> Summer 2024, 2025
-			</div>
-			<div class="experience-card">
-				<strong>Intro to Human-Robot Interaction (TA)</strong> Fall 2023, 2025
-			</div>
-			<div class="experience-card">
-				<strong>Robotics Teaching Lab (TA)</strong> Spring 2024
-			</div>
-			<div class="experience-card">
-				<strong>Probabilistic Robotics (TA)</strong> Spring 2023
-			</div>
+			<div class="section-title" style="margin-top: 0.5rem; font-weight: 600;">Tufts University</div>
+
+			<div class="course-grid">
+			<div class="teaching-course-card">
+				<div class="course-header">
+					<div class="course-header-left">
+						<strong class="course-title">Data Structures</strong>
+						<span class="course-role instructor-role">Instructor of Record</span>
+					</div>
+					<div class="course-header-right">
+						<span class="course-semesters">Summer 2024, 25, 26</span>
+
+					</div>
+				</div>
+				<div class="course-body">
+					<ul class="course-topics">
+						<li>ArrayLists, Stacks, Queues, Buffers, Recursion, Make and Makefiles, Tree Traversals, AVL Trees, Priority Queues and Heaps, Hashing and Hash Tables, Graphs, Dijkstra's Algorithm, Sorting Algorithms</li>
+						<!-- <li>Trees, heaps, hash tables, and graphs</li>
+						<li>Sorting and searching algorithms</li>
+						<li>Asymptotic complexity analysis (Big-O)</li> -->
+					</ul>
+					<!-- <a href="assets/syllabi/data-structures.pdf" class="syllabus-link" target="_blank">Syllabus →</a> -->
+				</div>
 			</div>
 
+			<div class="teaching-course-card">
+				<div class="course-header">
+					<div class="course-header-left">
+						<strong class="course-title">Introduction to HRI</strong>
+						<span class="course-role ta-role">TA</span>
+					</div>
+					<div class="course-header-right">
+						<span class="course-semesters">Fall 2023, 2025</span>
+
+					</div>
+				</div>
+				<div class="course-body">
+					<ul class="course-topics">
+						<li>Robot perception, planning, and control fundamentals</li>
+						<li>Human factors and interaction design</li>
+						<li>Accessibility and inclusive design in robotics</li>
+						<li>User study design and evaluation methods</li>
+					</ul>
+					<!-- <a href="assets/syllabi/hri.pdf" class="syllabus-link" target="_blank">Syllabus →</a> -->
+				</div>
+			</div>
+
+			<div class="teaching-course-card">
+				<div class="course-header">
+					<div class="course-header-left">
+						<strong class="course-title">Robotics Teaching Lab</strong>
+						<span class="course-role ta-role">TA</span>
+					</div>
+					<div class="course-header-right">
+						<span class="course-semesters">Spring 2024</span>
+
+					</div>
+				</div>
+				<div class="course-body">
+					<ul class="course-topics">
+						<li>Maintained lab robots: Turtlebot, Misty, Spheros</li>
+						<li>Maintained robot documentation</li>
+            <li>Helped students learn and use ROS</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="teaching-course-card">
+				<div class="course-header">
+					<div class="course-header-left">
+						<strong class="course-title">Probabilistic Robotics</strong>
+						<span class="course-role ta-role">TA</span>
+					</div>
+					<div class="course-header-right">
+						<span class="course-semesters">Spring 2023</span>
+
+					</div>
+				</div>
+				<div class="course-body">
+					<ul class="course-topics">
+						<li>Bayesian filtering and state estimation</li>
+						<li>Kalman filters and particle filters</li>
+						<li>Simultaneous localization and mapping (SLAM)</li>
+						<li>Motion planning under uncertainty</li>
+					</ul>
+				</div>
+			</div>
+			</div><!-- end course-grid -->
+
 			<hr>
+
 			<!-- Mount Holyoke College -->
 			<div class="section-title" style="margin-top: 1.5rem; font-weight: 600;">Mount Holyoke College</div>
-			<div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem;">
-			<div class="experience-card">
-				<strong>Operating Systems (TA)</strong> Spring 2022 
+
+			<div class="course-grid">
+			<div class="teaching-course-card">
+				<div class="course-header">
+					<div class="course-header-left">
+						<strong class="course-title">Operating Systems</strong>
+						<span class="course-role ta-role">TA</span>
+					</div>
+					<div class="course-header-right">
+						<span class="course-semesters">Spring 2022</span>
+
+					</div>
+				</div>
+				<div class="course-body">
+					<ul class="course-topics">
+						<li>operating system evolution, memory
+management, virtual memory, resource scheduling, multiprogramming,
+deadlocks, concurrent processes, protection, and design principles</li>
+					</ul>
+				</div>
 			</div>
-			<div class="experience-card">
-				<strong>Java Programming Language (TA)</strong> Spring 2021 
+
+			<div class="teaching-course-card">
+				<div class="course-header">
+					<div class="course-header-left">
+						<strong class="course-title">Java Programming Language</strong>
+						<span class="course-role ta-role">TA</span>
+					</div>
+					<div class="course-header-right">
+						<span class="course-semesters">Spring 2021</span>
+
+					</div>
+				</div>
+				<div class="course-body">
+					<ul class="course-topics">
+						<li>data structures, algorithms, and OOP in Java</li>
+					</ul>
+				</div>
 			</div>
-			</div>
+			</div><!-- end course-grid -->
 
 		</div>
 	</section>
@@ -332,6 +554,13 @@
 	  
     </div>
 
+    <script>
+      document.querySelectorAll('.teaching-course-card').forEach(function(card) {
+        card.addEventListener('click', function() {
+          this.classList.toggle('open');
+        });
+      });
+    </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
